@@ -1,0 +1,40 @@
+
+* {
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color:white;
+}
+
+span {
+  color:white;
+  background-color:#e6bd09;
+  padding: 12px;
+  
+}
+
+
+body {
+  color:white;
+
+}
+
+h2 { 
+  color: steelblue;
+}
+
+p {
+  color:#bdbdbd;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color:yellow;
+}
+
+img {
+  width: 100%;
+}
+
