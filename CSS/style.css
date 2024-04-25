@@ -5,11 +5,10 @@
   padding: 0;
 }
 
-body{
-    background-color: #050505; /* Tom de preto mais brilhante */
-    color: #aca3a3; /* Cor do texto branco */
+body {
+  background-color: #050505; /* Tom de preto mais brilhante */
+  color: #aca3a3; /* Cor do texto branco */
 }
-
 
 /* Estilização do cabeçalho */
 header {
@@ -25,11 +24,10 @@ header h1 {
 .title-box {
   background-color: #999898; /* Cinza claro */
   padding: 20px;
-  width: 800px;
   margin: 0 auto; /* Para centralizar horizontalmente */
   color: #000;
   text-align: center; /* Centralizar o texto */
-  border-radius: 0 0 10px 10px ;
+  border-radius: 0 0 10px 10px;
 }
 
 .title-box p {
@@ -40,53 +38,10 @@ header h1 {
 header img {
   width: 100%;
   height: auto;
-  max-width: calc(100% - 1060px); /* Largura máxima da imagem igual à largura máxima do texto do filme menos o padding */
+  max-width: 100%; /* Alterado para ser responsivo */
   display: block;
   margin: 0 auto;
-  border-radius: 10px 10px 0 0 ;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5), /* Luz branca */
-                0 0 100px rgba(255, 255, 255, 0.3), /* Luz branca mais fraca */
-                0 0 150px rgba(255, 255, 255, 0.2), /* Luz branca ainda mais fraca */
-                0 0 200px rgba(255, 255, 255, 0.1); /* Luz branca ainda mais fraca */
-  }
-  50% {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), /* Luz branca */
-                0 0 20px rgba(255, 255, 255, 0.3), /* Luz branca mais fraca */
-                0 0 30px rgba(255, 255, 255, 0.2), /* Luz branca ainda mais fraca */
-                0 0 40px rgba(255, 255, 255, 0.1); /* Luz branca ainda mais fraca */
-  }
-  100% {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.5), /* Luz branca */
-                0 0 100px rgba(255, 255, 255, 0.3), /* Luz branca mais fraca */
-                0 0 150px rgba(255, 255, 255, 0.2), /* Luz branca ainda mais fraca */
-                0 0 200px rgba(255, 255, 255, 0.1); /* Luz branca ainda mais fraca */
-  }
-}
-
-@keyframes shadow-move {
-  0% {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra inicial */
-  }
-  50% {
-    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.4), /* Sombra em movimento */
-                -20px -20px 40px rgba(0, 0, 0, 0.4); /* Sombra em movimento */
-  }
-  100% {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra final */
-  }
-}
-
-header img {
-  width: 100%;
-  height: auto;
-  max-width: calc(100% - 1060px); /* Largura máxima da imagem igual à largura máxima do texto do filme menos o padding */
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
   animation: glow 3s ease-in-out infinite alternate; /* Animação da luz branca */
 }
 
@@ -100,7 +55,6 @@ header img {
   z-index: -1; /* Coloca o overlay atrás de todos os outros elementos */
   animation: shadow-move 3s ease-in-out infinite alternate; /* Animação da sombra em movimento */
 }
-
 
 /* Estilização da seção de revisão */
 .review {
@@ -131,11 +85,10 @@ header img {
 
 @keyframes highlight {
   from {
-      color: #828384; /* Cor inicial */
+    color: #828384; /* Cor inicial */
   }
-
   to {
-      color: #434242; /* Cor final */
+    color: #434242; /* Cor final */
   }
 }
 
@@ -185,9 +138,22 @@ footer a:hover {
 
 @keyframes glow {
   from {
-      box-shadow: inset 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 20px rgba(47, 47, 48, 0.8);
+    box-shadow: inset 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 20px rgba(47, 47, 48, 0.8);
   }
   to {
-      box-shadow: inset 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 30px rgb(116, 116, 130);
+    box-shadow: inset 0px 0px 30px rgba(255,255,255,0.4), 0px 0px 30px rgb(116, 116, 130);
+  }
+}
+
+/* Media queries para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+  .title-box {
+    width: 90%; /* Reduz a largura da caixa de título */
+  }
+}
+
+@media (max-width: 576px) {
+  .title-box {
+    width: 95%; /* Reduz ainda mais a largura da caixa de título */
   }
 }
